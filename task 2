@@ -1,0 +1,19 @@
+int  number1, number2, number3, largest=0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите 3 числа:");
+        number1 = scan.nextInt();
+        number2=scan.nextInt();
+        number3=scan.nextInt();
+        if (number1>number2 && number1>number3){
+            largest=number1;
+        }else   if (number2>number1 && number2>number3) {
+            largest=number2;
+        }
+        else if (number3>number1 && number3>number2){
+            largest=number3;
+        }
+
+        else {
+            System.out.println("Наибольшее число повторяется, нет возможности вывести только одно");
+        }
+        System.out.println("Самое большое число из 3х - это : "+largest);
