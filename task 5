@@ -1,0 +1,23 @@
+package ua.com.practice;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int  count, i=0,max;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите число, которое будет определять количество введеных чисел для сравнения:");
+        count=scan.nextInt();
+        int[] list=new int[count];
+        System.out.println("Введите числа, подлежащие сравнению:");
+        while (i<count){
+            list[i]=scan.nextInt();
+            i++;
+        }
+        max=list[0];
+        for (i = 1; i < list.length; i++) {
+            if (list[i] > max) max = list[i];
+        }
+        System.out.println("Наибольшее число из введеных равно: "+max);
+    }
+}
