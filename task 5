@@ -1,0 +1,15 @@
+int  N, sqr=1, number=1;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите целое число и я напечатаю все квадраты натуральных чисел меньше или равные этому числу: ");
+        N = scan.nextInt();
+do {
+    sqr=number*number;
+    if (sqr>N){
+        break;
+    }
+    System.out.println(sqr);
+    number++;
+}while (sqr<N);
+if (N<1){
+    System.out.println("Введенное число отрицательное, а квадрат не может быть отрицательным");
+}
